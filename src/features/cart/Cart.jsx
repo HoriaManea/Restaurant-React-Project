@@ -31,18 +31,23 @@ function Cart() {
   const cart = fakeCart;
 
   return (
-    <div className="px-4 py-3">
-      <LinkButton to="/menu">&larr; Back to menu</LinkButton>
+    <div className="">
+      <LinkButton
+        to="/menu"
+        className="text-sm text-blue-500 hover:text-blue-600 hover:underline"
+      >
+        &larr; Back to menu
+      </LinkButton>
 
-      <h2 className="mt-7 text-xl font-semibold">Your cart, %NAME%</h2>
+      <h2 className="">Your cart, %NAME%</h2>
 
-      <ul className="mt-3 divide-y divide-stone-200 border-b">
+      <ul className="">
         {cart.map((item) => (
           <CartItem item={item} key={item.key} />
         ))}
       </ul>
 
-      <div className="mt-6 space-x-2">
+      <div className="">
         <Button to="/order/new" type="primary">
           Order pizzas
         </Button>
